@@ -14,6 +14,10 @@ class LocationNode:
 class TransitEdge:
     '''
     TransitEdge class
+    @Dhara: for now, implement with self.timing [number] as number of minutes
+        to traverse an edge only, no Timing implementation here yet.
+
+
     Stores data about the time a transit mode takes
     self.start: [LocationNode] TransitNode at beginning of pathway
     self.to: [LocationNode] TransitNode at end of pathway
