@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #Initial shortest path implementation using Dijkstra's algorithm
 import networkx as nx
 
