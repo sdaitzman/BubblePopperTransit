@@ -6,9 +6,11 @@ class LocationNode:
     '''
     LocationNode class
     Represents a node along the map, a location with some TransitEdges in/out
+    self.name: [string] Name of this node
     self.coords: [enum: (lat, lon)] Location
     '''
-    def __init__(self, coords=None):
+    def __init__(self, name=None, coords=None):
+        self.name = name     # name of this node
         self.coords = coords # (lat, lon)
 
 class TransitEdge:
