@@ -2,7 +2,7 @@
     "places": [
         {
             "name": "olin",
-            "coords": [1,3]
+            "coords": [42.291400,-71.264220]
         },
         {
             "name": "babson",
@@ -14,7 +14,7 @@
         },
         {
             "name": "reservoir",
-            "coords": [1,3]
+            "coords": [2,2]
         },
         {
             "name": "hynes",
