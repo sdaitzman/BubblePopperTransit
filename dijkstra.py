@@ -54,16 +54,12 @@ def findNext(current,G,weights):
 
     return next
             
-def score(G,w):
+def score(edge,weights):
     '''
     Give an edge a weighted sum according to the weights assigned by the user 
     '''
-    if w == 'cost':
-        return min(G.edges.cost)
-    if w == 'calories':
-        return max(G.edges.calories)
-    if w == 'time':
-        return min(G.edges.timing.averageTime)
+    for i in range(len(weights)):
+        score = score + edge[i]*weights[i]
 
 #Testing 
 G = nx.MultiDiGraph()
