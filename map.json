@@ -1,0 +1,44 @@
+{
+    "places": [
+        {
+            "name": "olin",
+            "coords": [42.291400,-71.264220]
+        },
+        {
+            "name": "babson",
+            "coords": [1,4]
+        },
+        {
+            "name": "eliot",
+            "coords": [2,5]
+        },
+        {
+            "name": "reservoir",
+            "coords": [2,2]
+        },
+        {
+            "name": "hynes",
+            "coords": [1,3]
+        },
+        {
+            "name": "park",
+            "coords": [1,3]
+        },
+        {
+            "name": "central",
+            "coords": [1,3]
+        },
+        {
+            "name": "mit",
+            "coords": [1,3]
+        },
+        {
+            "name": "harvard",
+            "coords": [1,3]
+        },
+        {
+            "name": "hmart",
+            "coords": [1,3]
+        }
+    ]
+}
