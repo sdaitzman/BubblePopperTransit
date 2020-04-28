@@ -2,7 +2,14 @@
     "places": [
         {
             "name": "olin",
-            "coords": [-71.2644, 42.2916]
+            "coords": [-71.2644, 42.2916],
+            "transit": [
+                ["tofrom", "babson", "walk"],
+                ["tofrom", "eliot", "walk", "lyft"],
+                ["tofrom", "reservoir", "lyft"],
+                ["to", "babson", "bike"],
+                ["to", "eliot", "bike"]
+            ]
         },
         {
             "name": "babson",
