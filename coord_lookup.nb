@@ -1,0 +1,90 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2976,         82]
+NotebookOptionsPosition[      2532,         67]
+NotebookOutlinePosition[      2930,         83]
+CellTagsIndexPosition[      2887,         80]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lookup", "[", "place_", "]"}], ":=", 
+  RowBox[{"LatitudeLongitude", "[", 
+   RowBox[{
+    RowBox[{"Interpreter", "[", "\"\<Location\>\"", "]"}], "[", "place", 
+    "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.797071102847403*^9, 3.797071124066074*^9}, {
+  3.797071270164401*^9, 3.797071281632299*^9}, {3.797072131019799*^9, 
+  3.797072135924354*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"0a2ab7a5-7cd0-4af7-9564-86a683326895"],
+
+Cell[BoxData[{
+ RowBox[{"place", " ", "=", 
+  RowBox[{
+  "lookup", "[", "\"\<hynes station, massachusetts\>\"", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"loc", "=", " ", 
+   RowBox[{"QuantityMagnitude", "[", "%", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lat", " ", "=", " ", 
+   RowBox[{"loc", "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"long", " ", "=", " ", 
+   RowBox[{"loc", "[", 
+    RowBox[{"[", "2", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ToString", "[", "long", "]"}], " ", "<>", " ", "\"\<, \>\"", " ", 
+   "<>", " ", 
+   RowBox[{"ToString", "[", "lat", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"CopyToClipboard", "[", " ", "%", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"GeoGraphics", "[", "place", "]"}]}], "Input",
+ CellChangeTimes->{{3.797071286925939*^9, 3.797071368374112*^9}, {
+  3.797071402676633*^9, 3.797071445020013*^9}, {3.797071546657814*^9, 
+  3.7970715476900682`*^9}, {3.7970716037655582`*^9, 3.797071627296857*^9}, {
+  3.797071708414689*^9, 3.797071745011181*^9}, {3.797071800916822*^9, 
+  3.797071802082699*^9}, {3.79707184701966*^9, 3.797071942803056*^9}, {
+  3.797071983597948*^9, 3.797071984742969*^9}, {3.797072028622262*^9, 
+  3.797072040680093*^9}, {3.797072079180109*^9, 3.7970722731984577`*^9}, {
+  3.797072304883314*^9, 3.797072346935322*^9}},
+ CellLabel->
+  "In[182]:=",ExpressionUUID->"d4de3f90-f1c5-4893-b27e-7aebd746b352"]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{Automatic, 105}, {206, Automatic}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7f55401b-e93e-43c7-820d-36f18184c8f6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 468, 10, 30, "Input",ExpressionUUID->"0a2ab7a5-7cd0-4af7-9564-86a683326895"],
+Cell[1029, 32, 1499, 33, 157, "Input",ExpressionUUID->"d4de3f90-f1c5-4893-b27e-7aebd746b352"]
+}
+]
+*)
+
