@@ -15,45 +15,59 @@ def dijkstra(G, i, j,weights):
     e = G.edges
     dist = {}
     visited = []
-    path = []
+    queue = []
+    path = [i]
 
     #set all distances to infinity 
     for n in G.nodes:
+        queue.append(n)
         if n != i:
-            dist[n] = float('inf')
+            dist[n] = 1000000000000
         else: 
             dist[n] = 0
             visited.append(n)
     
 
-    while visited != []:
-        current = visited.pop(0) #remove first item 
-
-        if current == j: #destination reached 
-            break
-        else:
-            next = findNext(current,G,w) #finds the best neighbor depending on the weights
-            path.append(next)
+    while queue != []:
+        next = findNext(G,dist,weights) #find the node with the minimum distance in dist dictionary
+        print(queue)
+        visited.append(next[0]) #add to visited
+        queue.remove(next[0])
+        path.append(next[0])
+        neighbors = findNbrs(G,next[0])
+        for n in neighbors:
+            if dist[n] > next[1] + neighbors[n]['weight']:
+                dist[n] = next[1] + neighbors[n]['weight']
+                
+                
 
     return path
 
-def findNext(current,G,weights):
+def findNext(G, dist, weights):
     """
     Finds the best neighbor depending on the weights 
-    current: current LocationNode
     G: graph containing LocationNodes
-    weights: dictionary of weights for criteria specified by user
+    dist: dictionary of distances 
+    weights: dictionary of weights for criteria specified by user #TODO: implement weighted sums 
     """
 
-    next = G.neighbors[0] #first LocationNode in the list of its neighbors
+    min = 10000000000 
+    for k in dist:
+        node = k
+        break
 
-    for edge in G.current.edges: #iterate through every edge for that node
-        myScore = score(edge,weights)
-        if myScore < score(G.next,weights): #if better score than best
-            next = edge
+    for n in dist:
+        if dist[n] < min: 
+            min = dist[n]
+            node = n
+    
+    return [n,min]
 
-    return next
-            
+def findNbrs(G,next):
+    for n in G.adj.items():
+        if n[0] == next:
+            return n[1] #a dictionary of all the neighbors and associated weights of each edge
+
 def score(edge,weights):
     '''
     Give an edge a weighted sum according to the weights assigned by the user 
@@ -62,7 +76,7 @@ def score(edge,weights):
         score = score + edge[i]*weights[i]
 
 #Testing 
-G = nx.MultiDiGraph()
+'''G = nx.MultiDiGraph()
 
 olin = ds.LocationNode([1,1])
 eliot = ds.LocationNode([0,0])
@@ -71,4 +85,14 @@ G.add_node(eliot)
 G.add_node(olin)
 
 uberTime = ds.Timing('immediate',15)
-uber = ds.TransitEdge(olin,eliot,8,'uber',0,uberTime)
+uber = ds.TransitEdge(olin,eliot,8,'uber',0,uberTime)'''
+G = nx.Graph()
+G.add_node(1)
+G.add_node(2)
+G.add_node(3)
+G.add_node(4)
+
+G.add_weighted_edges_from([(1, 2, 1), (1, 3, 7), (1, 4, 1), (3, 4, 1)])
+
+dijkstra(G,1,3,[1,1,1,1])
+    
