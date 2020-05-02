@@ -2,43 +2,50 @@
     "places": [
         {
             "name": "olin",
-            "coords": [42.291400,-71.264220]
+            "coords": [-71.2644, 42.2916],
+            "transit": [
+                ["tofrom", "babson", "walk"],
+                ["tofrom", "eliot", "walk", "lyft"],
+                ["tofrom", "reservoir", "lyft"],
+                ["to", "babson", "bike"],
+                ["to", "eliot", "bike"]
+            ]
         },
         {
             "name": "babson",
-            "coords": [1,4]
+            "coords": [-71.2653, 42.297]
         },
         {
             "name": "eliot",
-            "coords": [2,5]
+            "coords": [-71.2166, 42.319]
         },
         {
             "name": "reservoir",
-            "coords": [2,2]
+            "coords": [-71.1484, 42.3348]
         },
         {
             "name": "hynes",
-            "coords": [1,3]
+            "coords": [-71.0874, 42.348]
         },
         {
             "name": "park",
-            "coords": [1,3]
+            "coords": [-71.1526, 42.2832]
         },
         {
             "name": "central",
-            "coords": [1,3]
+            "coords": [-71.1037, 42.3654]
         },
         {
             "name": "mit",
-            "coords": [1,3]
+            "coords": [-71.0939, 42.3594]
         },
         {
             "name": "harvard",
-            "coords": [1,3]
+            "coords": [-71.119, 42.3734]
         },
         {
             "name": "hmart",
-            "coords": [1,3]
+            "coords": [-71.1022, 42.3654]
         }
     ]
 }
