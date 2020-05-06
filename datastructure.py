@@ -6,7 +6,7 @@ class LocationNode:
     '''
     LocationNode class
     Represents a node along the map, a location with some TransitEdges in/out
-    self.name: [string] Name of this node
+    self.name: [string] Name of this node -- optional, unneeded in NetworkX
     self.coords: [enum: (lon, lat)] Location
     '''
     def __init__(self, name=None, coords=None):
@@ -16,11 +16,8 @@ class LocationNode:
 class TransitEdge:
     '''
     TransitEdge class
-    @Dhara: for now, implement with self.timing [number] as number of minutes
-        to traverse an edge only, no Timing implementation here yet.
-
-
     Stores data about the time a transit mode takes
+    
     self.start: [LocationNode] TransitNode at beginning of pathway
     self.to: [LocationNode] TransitNode at end of pathway
     self.cost: [number] Cost in USD to follow this path
